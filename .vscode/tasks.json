@@ -1,0 +1,124 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "repair-workspace-deps",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "repair-web-deps",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--workspace",
+				"web"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "install-web-core-deps",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--prefix",
+				"apps/web",
+				"@tailwindcss/postcss",
+				"react",
+				"react-dom"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "install-prisma-client-web",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--workspace",
+				"web",
+				"@prisma/client@^7.5.0"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "generate-prisma-client-web",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"exec",
+				"--workspace",
+				"web",
+				"prisma",
+				"generate",
+				"--schema",
+				"packages/db/prisma/schema.prisma"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "install-prisma-client-root",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"-W",
+				"@prisma/client@^7.5.0"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "generate-prisma-client-db",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"exec",
+				"--workspace",
+				"@repo/db",
+				"--",
+				"prisma",
+				"generate"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "fix-web-prisma-deps",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--workspace",
+				"web",
+				"@prisma/adapter-pg",
+				"pg"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "fix-root-react-resolution",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"react@19.2.3",
+				"react-dom@19.2.3"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "sync-workspace-install",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install"
+			],
+			"isBackground": false
+		}
+	]
+}

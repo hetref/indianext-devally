@@ -19,5 +19,10 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@prisma/client": "^7.5.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
 }
