@@ -1,0 +1,16 @@
+{
+    "name": "@repo/detection",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "main": "./risk-engine.ts",
+    "types": "./risk-engine.ts",
+    "scripts": {
+        "build": "echo \"Build not configured yet for @repo/detection\"",
+        "lint": "echo \"Lint not configured yet for @repo/detection\"",
+        "check-types": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "typescript": "^5"
+    }
+}

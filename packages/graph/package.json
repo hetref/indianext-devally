@@ -1,0 +1,16 @@
+{
+    "name": "@repo/graph",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "main": "./graph-service.ts",
+    "types": "./graph-service.ts",
+    "scripts": {
+        "build": "echo \"Build not configured yet for @repo/graph\"",
+        "lint": "echo \"Lint not configured yet for @repo/graph\"",
+        "check-types": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "typescript": "^5"
+    }
+}

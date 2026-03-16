@@ -1,0 +1,16 @@
+{
+    "name": "@repo/db",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "main": "./client.ts",
+    "types": "./client.ts",
+    "scripts": {
+        "build": "echo \"No build step configured for @repo/db yet\"",
+        "lint": "echo \"No lint step configured for @repo/db yet\"",
+        "check-types": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "typescript": "^5"
+    }
+}
